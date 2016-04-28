@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+	<tabs>
+		<Tab text="Doctor">
+			<content>
+				<GridPane>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="267.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="333.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="225.0" minHeight="10.0" prefHeight="225.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<GridPane>
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<TextField fx:id="tf_measureValue" GridPane.rowIndex="1" />
+										<ComboBox fx:id="combo_measureType" prefWidth="150.0" promptText="Measure Type">
+											<items>
+												<FXCollections fx:factory="observableArrayList">
+													<String fx:value="weight" />
+													<String fx:value="height" />
+													<String fx:value="steps" />
+													<String fx:value="distance" />
+												</FXCollections>
+											</items>
+										</ComboBox>
+										<Button mnemonicParsing="false" onAction="#doAddMeasure" text="AddMeasure" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+									</children>
+									<GridPane.margin>
+										<Insets right="30.0" />
+									</GridPane.margin>
+								</GridPane>
+								<GridPane prefHeight="72.0" prefWidth="95.0" GridPane.rowIndex="1">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Type" />
+										<Label text="Value" GridPane.rowIndex="1" />
+									</children>
+									<padding>
+										<Insets left="20.0" />
+									</padding>
+								</GridPane>
+							</children>
+						</GridPane>
+						<VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<children>
+								<Label text="Lifestatus" />
+								<ListView fx:id="listview_lifestatus" prefHeight="206.0" prefWidth="329.0" />
+							</children>
+						</VBox>
+						<Button mnemonicParsing="false" onAction="#doGetAllMeasures" text="GetAllMeasures" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+					</children>
+				</GridPane>
+			</content>
+		</Tab>
+		<Tab text="Coach">
+			<content>
+				<GridPane>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="290.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="310.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="45.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="133.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="222.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<GridPane GridPane.rowIndex="1">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<Label text="Activity type" />
+								<Label text="Activity duration (h)" GridPane.rowIndex="1" />
+								<ComboBox fx:id="combo_activity" prefWidth="150.0" promptText="Activity" GridPane.columnIndex="1">
+									<items>
+										<FXCollections fx:factory="observableArrayList">
+											<String fx:value="Sciare" />
+											<String fx:value="Nuotare" />
+											<String fx:value="Correre" />
+											<String fx:value="Tennis" />
+											<String fx:value="bicicletta" />
+										</FXCollections>
+									</items>
+								</ComboBox>
+								<Spinner fx:id="spinner_activityDuration" initialValue="2" max="12" min="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+								<Button mnemonicParsing="false" onAction="#doAddActivity" text="AddActivity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+							</children>
+						</GridPane>
+						<VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<padding>
+								<Insets left="20.0" />
+							</padding>
+							<children>
+								<Label text="Done activity" />
+								<ListView fx:id="listview_doneActivities" prefHeight="200.0" prefWidth="200.0" />
+							</children>
+						</VBox>
+					</children>
+				</GridPane>
+			</content>
+		</Tab>
+		<Tab text="Dietologist">
+			<content>
+				<GridPane>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="10.0" prefWidth="470.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="130.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="132.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<GridPane GridPane.rowIndex="1">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<TextField fx:id="tf_food" />
+								<Button mnemonicParsing="false" onAction="#doSuggestFoodWithCalBound" text="SuggestWithCalBound" GridPane.rowIndex="2" />
+								<Button mnemonicParsing="false" onAction="#doSuggestFood" text="SuggestFood" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+								<Slider fx:id="cal_slider" blockIncrement="200.0" majorTickUnit="1000.0" max="10000.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" value="2000.0" GridPane.columnIndex="1" />
+							</children>
+						</GridPane>
+					</children>
+				</GridPane>
+			</content>
+		</Tab>
+		<Tab text="Psycholigst">
+			<content>
+				<GridPane>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="0.0" prefWidth="0.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="300.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="291.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="303.0" minHeight="10.0" prefHeight="168.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="197.0" minHeight="10.0" prefHeight="187.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="107.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="209.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="88.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<Label text="Description" GridPane.rowIndex="1" />
+								<ComboBox fx:id="combo_goalDesc" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+									<items>
+										<FXCollections fx:factory="observableArrayList">
+											<String fx:value="weight" />
+											<String fx:value="height" />
+											<String fx:value="steps" />
+											<String fx:value="distance" />
+											<String fx:value="Sciare" />
+											<String fx:value="Nuotare" />
+											<String fx:value="Correre" />
+											<String fx:value="Tennis" />
+											<String fx:value="bicicletta" />
+										</FXCollections>
+									</items>
+								</ComboBox>
+								<TextField fx:id="tf_goalEndValue" prefHeight="25.0" prefWidth="47.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+								<Label text="Target Value" GridPane.rowIndex="2" />
+							</children>
+						</GridPane>
+						<Button mnemonicParsing="false" onAction="#doFollowGoal" text="FollowGoal" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+						<VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+							<children>
+								<Label text="TO DO" />
+								<ListView fx:id="listview_todoGoal" prefHeight="142.0" prefWidth="269.0">
+									<padding>
+										<Insets right="10.0" />
+									</padding>
+								</ListView>
+							</children>
+							<padding>
+								<Insets left="15.0" right="10.0" />
+							</padding>
+						</VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="DONE" />
+                        <ListView fx:id="listview_doneGoal" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="10.0" />
+                     </padding>
+                  </VBox>
+					</children>
+				</GridPane>
+			</content>
+		</Tab>
+		<Tab text="Account">
+			<content>
+				<GridPane>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Button mnemonicParsing="false" onAction="#doLogout" text="logout" />
+					</children>
+				</GridPane>
+			</content>
+		</Tab>
+	</tabs>
+</TabPane>

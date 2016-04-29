@@ -427,19 +427,19 @@ public class HomePageController implements Initializable {
             case "distance":
                 gtype = "Health";
                 break;
-            case "Sciare":
+            case "Sky":
                 gtype = "Activity";
                 break;
-            case "Nuotare":
+            case "Swim":
                 gtype = "Activity";
                 break;
-            case "Correre":
+            case "Run":
                 gtype = "Activity";
                 break;
             case "Tennis":
                 gtype = "Activity";
                 break;
-            case "bicicletta":
+            case "bicycle":
                 gtype = "Activity";
                 break;
             default:

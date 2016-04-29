@@ -64,6 +64,14 @@ public class StartingPageController {
 					User user = prs.login(username, password);
 					// caricare e mettere in cache le cose che servono in
 					// homepage
+                    
+                    if(user==null){
+                        
+                        Alert alert1=new Alert(Alert.AlertType.CONFIRMATION,"wrong username or password");
+                        return null;
+                        
+                    }
+                        
 					Main.cache.put("user", user);
 
 					List<HealthMeasure> recMeasures = prs.getRecentHealthMeasureByUser(user.getIdUser());
@@ -78,6 +86,8 @@ public class StartingPageController {
 					List<Goal> doneGoal = prs.getGoalAchieved(user.getIdUser());
 					Main.cache.put("doneGoal", doneGoal);
 					return user;
+                    
+                    
 				}
 			};
 
@@ -103,10 +113,7 @@ public class StartingPageController {
 			new Thread(task).start();
 
 		} catch (Exception e) {
-            
-            Alert alert1=new Alert(Alert.AlertType.CONFIRMATION,"wrong username or password");
-            
-            
+        
 			e.printStackTrace();
             
 		}

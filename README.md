@@ -26,11 +26,9 @@ Into this black we fund 5 web service + UI run locally. Among these web services
 * DATABASE SERVICE-A SOAP web services that communicates directly with the Database (SQLite) and it is responsible for management of all data model and query. 
 * ADAPTER SERVICES-A REST web service that communicate with different data sources: retrieves and expose information useful for services. In detail this layer interacts with two external API (Food data, http://api.edamam.com, Quote data, https://theysaidso.com/)
 * STORAGE SERVICES-A SOAP web services that manages and handle all data request, in detail it talks with database web service and adapter web services 
-* BUSINESS LOGIC SERVICES- The core of project responsible of decision making, controls and calculation  (in example goals control)
-* PROCESS CENTRIC SERVICES-these services serve all requests coming directly from users (from application interface). These are the gateway to all other modules/services in an application context. This layer is doing nothing but redirecting a request to a proper underlying service or a set of services.
-
-
-* USER INTERFACE-It is run locally provides service coming from process in a fashionable mode
+* BUSINESS LOGIC SERVICES-A SOAP web service. The core of project responsible of decision making, controls and calculation  (in example goals control)
+* PROCESS CENTRIC SERVICES-A SOAP web service that serve all requests coming directly from users (from application interface). These are the gateway to all other modules/services in an application context. This layer is doing nothing but redirecting a request to a proper underlying service or a set of services.
+* USER INTERFACE-JAVAfX application, it is run locally provides service coming from process in a fashionable mode
 
 
 

@@ -407,7 +407,7 @@ public class HomePageController implements Initializable {
 	// Goal related methods
 	@FXML
 	void doFollowGoal(ActionEvent event) {
-		// sar‡ fatto ora vado a prendere il bus
+		// sar fatto ora vado a prendere il bus
 		System.out.println("Following new goal");
 		String gdesc = combo_goalDesc.getValue();
 		// Integer calBound=spinner_foodCal.getValue();
@@ -427,7 +427,7 @@ public class HomePageController implements Initializable {
             case "distance":
                 gtype = "Health";
                 break;
-            case "Sky":
+            case "Ski":
                 gtype = "Activity";
                 break;
             case "Swim":

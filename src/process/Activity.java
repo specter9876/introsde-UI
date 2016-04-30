@@ -51,7 +51,7 @@ public class Activity {
 	protected double value;
 
 	/**
-	 * Recupera il valore della proprieta calories.
+	 * Recupera il valore della propriet calories.
 	 *
 	 */
 	public double getCalories() {
@@ -141,7 +141,7 @@ public class Activity {
 	}
 
 	/**
-	 * Recupera il valore della propriet isMyActivity.
+	 * Recupera il valore della proprieta isMyActivity.
 	 *
 	 */
 	public int getIsMyActivity() {

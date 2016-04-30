@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="dist.jar" size="120481" download="null" />
+    <jar href="dist.jar" size="120433" download="null" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="application.Main"  name="UserInterface" />
   <update check="background"/>

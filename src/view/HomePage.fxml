@@ -129,11 +129,11 @@
 								<ComboBox fx:id="combo_activity" prefWidth="150.0" promptText="Activity" GridPane.columnIndex="1">
 									<items>
 										<FXCollections fx:factory="observableArrayList">
-											<String fx:value="Sciare" />
-											<String fx:value="Nuotare" />
-											<String fx:value="Correre" />
+											<String fx:value="Ski" />
+											<String fx:value="Swim" />
+											<String fx:value="Run" />
 											<String fx:value="Tennis" />
-											<String fx:value="bicicletta" />
+											<String fx:value="bycicle" />
 										</FXCollections>
 									</items>
 								</ComboBox>
@@ -222,11 +222,11 @@
 											<String fx:value="height" />
 											<String fx:value="steps" />
 											<String fx:value="distance" />
-											<String fx:value="Sciare" />
-											<String fx:value="Nuotare" />
-											<String fx:value="Correre" />
+											<String fx:value="Ski" />
+											<String fx:value="Swim" />
+											<String fx:value="Run" />
 											<String fx:value="Tennis" />
-											<String fx:value="bicicletta" />
+											<String fx:value="bycicle" />
 										</FXCollections>
 									</items>
 								</ComboBox>

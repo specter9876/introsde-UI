@@ -56,11 +56,11 @@
 					vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
-				<Label prefHeight="17.0" prefWidth="87.0" text="Nome"
+				<Label prefHeight="17.0" prefWidth="87.0" text="Name"
 					GridPane.columnIndex="1" GridPane.rowIndex="1" />
 				<TextField fx:id="tf_name" GridPane.columnIndex="2"
 					GridPane.rowIndex="1" />
-				<Label text="Cognome" GridPane.columnIndex="1"
+				<Label text="Surname" GridPane.columnIndex="1"
 					GridPane.rowIndex="2" />
 				<TextField fx:id="tf_lastname" GridPane.columnIndex="2"
 					GridPane.rowIndex="2" />

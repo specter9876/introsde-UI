@@ -67,7 +67,7 @@ public class StartingPageController {
                     
                     if(user==null){
                         
-                        Alert alert1=new Alert(Alert.AlertType.CONFIRMATION,"wrong username or password");
+                        System.out.println("wrong user");
                         return null;
                         
                     }
@@ -96,6 +96,17 @@ public class StartingPageController {
 				public void handle(WorkerStateEvent t) {
 					alert.hide();
 					User user = task.getValue();
+                    
+                    if(user==null){
+                        System.out.println("wrong ueser or password");
+                        Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Virtual Coach");
+                        alert.setHeaderText("Error");
+                        alert.setContentText("Wrong login");
+                        alert.showAndWait();
+                        return;
+                    }
+                    
 					System.out.println("UserID: " + user.getIdUser());
 					Parent root = null;
 					try {

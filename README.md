@@ -19,6 +19,8 @@ As we can see in the Fig. 1 the virtual life coach project is composed into 3 ma
 * System Logic
 * Data sources
 
+[[https://github.com/specter9876/introsde-UI/blob/master/img/Schermata%202016-04-30%20alle%2015.19.22.png|alt=octocat]]]
+
 Into this black we fund 5 web service + UI run locally. Among these web services 4 are SOAP and 1 REST:
 
 * DATABASE SERVICE-A SOAP web services that communicates directly with the Database (SQLite) and it is responsible for management of all data model and query. 

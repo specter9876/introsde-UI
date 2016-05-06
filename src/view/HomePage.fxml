@@ -14,6 +14,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
@@ -129,11 +130,11 @@
 								<ComboBox fx:id="combo_activity" prefWidth="150.0" promptText="Activity" GridPane.columnIndex="1">
 									<items>
 										<FXCollections fx:factory="observableArrayList">
-											<String fx:value="Ski" />
-											<String fx:value="Swim" />
-											<String fx:value="Run" />
+											<String fx:value="Sciare" />
+											<String fx:value="Nuotare" />
+											<String fx:value="Correre" />
 											<String fx:value="Tennis" />
-											<String fx:value="bycicle" />
+											<String fx:value="bicicletta" />
 										</FXCollections>
 									</items>
 								</ComboBox>
@@ -162,16 +163,16 @@
 						<ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="130.0" />
 					</columnConstraints>
 					<rowConstraints>
-						<RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
-						<RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="132.0" vgrow="SOMETIMES" />
-						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="270.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="60.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
 						<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
 					</rowConstraints>
 					<children>
-						<GridPane GridPane.rowIndex="1">
+						<GridPane prefHeight="267.0" prefWidth="530.0" GridPane.rowIndex="1">
 							<columnConstraints>
-								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="447.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="23.0" />
 							</columnConstraints>
 							<rowConstraints>
 								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -179,10 +180,41 @@
 								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 							</rowConstraints>
 							<children>
-								<TextField fx:id="tf_food" />
-								<Button mnemonicParsing="false" onAction="#doSuggestFoodWithCalBound" text="SuggestWithCalBound" GridPane.rowIndex="2" />
-								<Button mnemonicParsing="false" onAction="#doSuggestFood" text="SuggestFood" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-								<Slider fx:id="cal_slider" blockIncrement="200.0" majorTickUnit="1000.0" max="10000.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" value="2000.0" GridPane.columnIndex="1" />
+                        <VBox prefHeight="70.0" prefWidth="350.0">
+                           <children>
+                              <Label text="Ingredients" />
+      								<TextField fx:id="tf_food" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <opaqueInsets>
+                              <Insets left="50.0" right="20.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Calories bound" />
+      								<Slider fx:id="cal_slider" blockIncrement="100.0" majorTickUnit="500.0" max="5000.0" min="500.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" value="2000.0" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets left="20.0" right="20.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+      								<Button mnemonicParsing="false" onAction="#doSuggestFoodWithCalBound" text="SuggestWithCalBound">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+      								<Button mnemonicParsing="false" onAction="#doSuggestFood" text="SuggestFood">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
 							</children>
 						</GridPane>
 					</children>
@@ -222,11 +254,11 @@
 											<String fx:value="height" />
 											<String fx:value="steps" />
 											<String fx:value="distance" />
-											<String fx:value="Ski" />
-											<String fx:value="Swim" />
-											<String fx:value="Run" />
+											<String fx:value="Sciare" />
+											<String fx:value="Nuotare" />
+											<String fx:value="Correre" />
 											<String fx:value="Tennis" />
-											<String fx:value="bycicle" />
+											<String fx:value="bicicletta" />
 										</FXCollections>
 									</items>
 								</ComboBox>

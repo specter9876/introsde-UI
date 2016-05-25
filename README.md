@@ -10,6 +10,7 @@ The virtual life coach system has the aim of help people (N users are allowed to
 * motivational quotes
 * set of goals to achieve
 * food suggestion for calories bound
+
 This features well be useful for beginner and expert user who wants to monitoring their own progress.
 (individual project work)
 

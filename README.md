@@ -3,14 +3,13 @@
 
 ## DESCRIPTION
 
-The virtual life coach system has the aim of help people (N users are allowed to record) who want to achieved a better healthy life status. This is perform by providing:
+The virtual life coach system has the aim of help people (N users are allowed to register) who want to achieved a better healthy life status. This is perform by providing:
 * registration of health measures and activities
 * history of all measures and activities
 * feedback on measure addition
 * motivational quotes
 * set of goals to achieve
 * food suggestion for calories bound
-
 
 This features well be useful for beginner and expert user who wants to monitoring their own progress.
 (individual project work)
